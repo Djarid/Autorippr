@@ -88,7 +88,7 @@ sudo dpkg --force-depends -i filebot-*.deb && rm filebot-*.deb
 
 
 ## Install Python Required Packages
-sudo pip2 install tendo pyyaml peewee pushover python-pushover pymediainfo
+sudo pip2 install tendo pyyaml peewee pushover python-pushover chump pymediainfo
 
 
 ## Install additional dependencies
