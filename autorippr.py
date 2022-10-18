@@ -5,7 +5,7 @@ Autorippr
 Ripping
     Uses MakeMKV to watch for videos inserted into DVD/BD Drives
 
-    Automaticly checks for existing directory/video and will NOT overwrite existing
+    Automatically checks for existing directory/video and will NOT overwrite existing
     files or folders
 
     Checks minimum length of video to ensure video is ripped not previews or other
@@ -110,7 +110,7 @@ def eject(config, drive):
 
     except Exception as ex:
         log.error("Could not detect OS or eject CD tray")
-        log.ex("An exception of type {} occured.".format(type(ex).__name__))
+        log.ex("An exception of type {} occurred.".format(type(ex).__name__))
         log.ex("Args: \r\n {}".format(ex.args))
 
     finally:
@@ -415,8 +415,6 @@ def extras(config):
             else:
                 log.info("Not grabbing subtitles")
                 database.update_video(dbvideo, 8)
-
-
 
             if 'extra' in config['notification']['notify_on_state']:
                 notify.extra_complete(dbvideo)
