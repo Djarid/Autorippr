@@ -54,7 +54,8 @@ class FileBot(object):
                 '--db',
                 '%s' % db,
                 '--output',
-                "%s" % movePath
+                "%s" % movePath,
+                '--format "{plex.id}"'
             ],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
