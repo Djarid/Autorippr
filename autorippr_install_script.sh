@@ -6,9 +6,9 @@ cd ~
 
 
 ## Ubuntu fix for installing packages
-sudo apt-get purge runit
-sudo apt-get purge git-all
-sudo apt-get purge git
+sudo apt-get purge -y runit
+sudo apt-get purge -y git-all
+sudo apt-get purge -y git
 sudo apt-get autoremove
 sudo apt update
 
