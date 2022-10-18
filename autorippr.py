@@ -428,8 +428,14 @@ def extras(config):
                 if ex.errno == errno.ENOTEMPTY:
                     log.debug("Directory not empty")
 
+                if 'extra' in config['notification']['notify_on_state']:
+                    notify.general_error(dbvideo, "Directory not empty")
+
         else:
             log.info("Rename failed")
+
+            if 'extra' in config['notification']['notify_on_state']:
+                notify.general_error(dbvideo, "Rename failed")
 
     else:
         log.info("No videos ready for filebot")

@@ -40,6 +40,11 @@ class Notification(object):
                     self.log.error(
                         "Error loading notification class: {}".format(method))
 
+    def general_error(self, dbvideo, message):
+
+        status = 'An error occured while processing "%s": %s' %dbvideo.vidname %message
+        self._send(status)
+
     def rip_started(self, dbvideo):
 
         status = 'Rip of "%s" started' % dbvideo.vidname
@@ -68,4 +73,9 @@ class Notification(object):
     def extra_complete(self, dbvideo):
 
         status = 'Extra of "%s" complete' % dbvideo.vidname
+        self._send(status)
+
+    def extra_failed(self, dbvideo):
+
+        status = 'Extra of "%s" failed' % dbvideo.vidname
         self._send(status)
