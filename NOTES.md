@@ -1,3 +1,11 @@
+# MS Notes
+
+### Filebot CLI command:
+filebot -rename {{dbvideo.path}}/{{dbvideo.filename}} --q {{vidname}} -non-strict --db {{db}} --output {{movePath}} --format "{plex.id}"
+
+
+---
+
 # Misc notes for future me / developers
 
 ## TV Shows (and maybe proper movie titles)
