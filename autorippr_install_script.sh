@@ -96,7 +96,7 @@ sudo apt-get install -y libmediainfo-dev
 
 ## Install Autorippr
 cd ~
-git clone https://github.com/JasonMillward/Autorippr.git autoripper
+git clone https://github.com/mp-strachan/Autorippr.git autoripper
 cd autorippr
 git checkout
 cp settings.example.cfg settings.cfg
