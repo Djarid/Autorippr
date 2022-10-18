@@ -180,6 +180,9 @@ def rip(config):
                             dvdTitle['title']
                         )
 
+                        if 'started' in config['notification']['notify_on_state']:
+                                notify.rip_started(dbvideo)
+
                         log.debug("Attempting to rip {} from {}".format(
                             dvdTitle['title'],
                             disc_title

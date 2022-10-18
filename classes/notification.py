@@ -40,27 +40,32 @@ class Notification(object):
                     self.log.error(
                         "Error loading notification class: {}".format(method))
 
+    def rip_started(self, dbvideo):
+
+        status = 'Rip of "%s" started' % dbvideo.vidname
+        self._send(status)
+
     def rip_complete(self, dbvideo):
 
-        status = 'Rip of %s complete' % dbvideo.vidname
+        status = 'Rip of "%s" complete' % dbvideo.vidname
         self._send(status)
 
     def rip_fail(self, dbvideo):
 
-        status = 'Rip of %s failed' % dbvideo.vidname
+        status = 'Rip of "%s" failed' % dbvideo.vidname
         self._send(status)
 
     def compress_complete(self, dbvideo):
 
-        status = 'Compress of %s complete' % dbvideo.vidname
+        status = 'Compress of "%s" complete' % dbvideo.vidname
         self._send(status)
 
     def compress_fail(self, dbvideo):
 
-        status = 'Compress of %s failed' % dbvideo.vidname
+        status = 'Compress of "%s" failed' % dbvideo.vidname
         self._send(status)
 
     def extra_complete(self, dbvideo):
 
-        status = 'Extra of %s complete' % dbvideo.vidname
+        status = 'Extra of "%s" complete' % dbvideo.vidname
         self._send(status)
