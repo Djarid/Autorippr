@@ -41,7 +41,7 @@ class FileBot(object):
         vidname = re.sub(r'S(\d)', '', dbvideo.vidname)
         vidname = re.sub(r'D(\d)', '', vidname)
 
-        log.debug("Regular expression VIDNAME {}.".format(vidname))
+        self.log.debug("Regular expression VIDNAME {}.".format(vidname))
 
         proc = subprocess.Popen(
             [
