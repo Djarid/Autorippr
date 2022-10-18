@@ -30,7 +30,7 @@ pip2 --version
 
 
 ## Intall MakeMKV required tools and libraries
-sudo apt-get install build-essential pkg-config libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev qtbase5-dev zlib1g-dev
+sudo apt-get install -y build-essential pkg-config libc6-dev libssl-dev libexpat1-dev libavcodec-dev libgl1-mesa-dev qtbase5-dev zlib1g-dev
 
 
 ## Install FFMPEG
@@ -64,7 +64,7 @@ sudo make install
 
 
 ## Install Handbrake CLI
-sudo apt-get install handbrake-cli
+sudo apt-get install -y handbrake-cli
 
 
 ## Install MKVToolNix
@@ -97,8 +97,8 @@ sudo apt-get install -y libmediainfo-dev
 
 ## Install Autorippr
 cd ~
-git clone https://github.com/mp-strachan/Autorippr.git autoripper
-cd autorippr
+git clone https://github.com/mp-strachan/Autorippr.git
+cd Autorippr
 git checkout
 cp settings.example.cfg settings.cfg
 
@@ -126,7 +126,7 @@ echo "##                                == Configure Autorippr ==               
 echo "##                                 ~/autorippr/settings.cfg                               ##"
 echo "##                                                                                        ##"
 echo "##                                   == Add to cron ==                                    ##"
-echo "##    */5 * * * * /usr/bin/python2 /home/ripper/autorippr/autorippr.py --all --silent     ##"
+echo "##     */5 * * * * /usr/bin/python2 /home/jack/Autorippr/autorippr.py --all --silent      ##"
 echo "##                                                                                        ##"
 echo "##                                                                                        ##"
 echo "##                                == Setup FileBot ==                                     ##"
