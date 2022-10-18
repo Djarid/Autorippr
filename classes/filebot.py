@@ -41,6 +41,7 @@ class FileBot(object):
         vidname = re.sub(r'S(\d)', '', dbvideo.vidname)
         vidname = re.sub(r'D(\d)', '', vidname)
 
+        log.debug("Regular expression VIDNAME {}.".format(vidname))
 
         proc = subprocess.Popen(
             [
@@ -61,6 +62,7 @@ class FileBot(object):
 
         (results, errors) = proc.communicate()
 
+        self.log.debug("Filebot status code: %d" % proc.returncode)
         if proc.returncode is not 0:
             self.log.error(
                 "Filebot (rename) returned status code: %d" % proc.returncode)
@@ -70,6 +72,7 @@ class FileBot(object):
 
         if len(results) is not 0:
             lines = results.split("\n")
+            self.log.debug("Filebot CLI response:")
             self.log.debug(results.split("\n"))
             for line in lines:
                 if line:
