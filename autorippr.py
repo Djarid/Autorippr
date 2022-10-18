@@ -380,6 +380,7 @@ def extras(config):
                 movePath = config['filebot']['moviePath']
 
         status = fb.rename(dbvideo, movePath)
+        log.debug("Rename status: {}.".format(status))
 
         if status[0]:
             log.info("Rename success")
