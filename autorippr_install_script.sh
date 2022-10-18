@@ -9,7 +9,8 @@ cd ~
 sudo apt-get purge -y runit
 sudo apt-get purge -y git-all
 sudo apt-get purge -y git
-sudo apt-get autoremove
+sudo apt-get purge -y python3
+sudo apt-get -y autoremove
 sudo apt update
 
 
