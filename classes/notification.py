@@ -42,7 +42,7 @@ class Notification(object):
 
     def general_error(self, dbvideo, message):
 
-        status = 'An error occured while processing "%s": %s' %dbvideo.vidname %message
+        status = 'An error occurred: %s' % message
         self._send(status)
 
     def rip_started(self, dbvideo):
