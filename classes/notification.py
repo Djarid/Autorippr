@@ -72,10 +72,10 @@ class Notification(object):
 
     def extra_complete(self, dbvideo):
 
-        status = 'Extra of "%s" complete' % dbvideo.vidname
+        status = 'Post-processing of "%s" complete' % dbvideo.vidname
         self._send(status)
 
     def extra_failed(self, dbvideo):
 
-        status = 'Extra of "%s" failed' % dbvideo.vidname
+        status = 'Post-processing of "%s" failed' % dbvideo.vidname
         self._send(status)
